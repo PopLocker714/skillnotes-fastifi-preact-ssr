@@ -1,0 +1,43 @@
+{
+    "name": "fastify-preact-ssr",
+    "version": "1.0.0",
+    "description": "Fastify server-side renders Preact to html and serves with a Preact client.js bundle for DOM hydration. Powered by Rollup.",
+    "main": "build/index.js",
+    "scripts": {
+        "nodemon": "nodemon build/server.js",
+        "rollup": "rollup --config --sourcemap --watch",
+        "dev": "npm run rollup & npm run nodemon",
+        "start": "node build/server.js",
+        "build": "rollup --config"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sebringrose/fastify-preact-ssr.git"
+    },
+    "keywords": [
+        "fastify",
+        "preact",
+        "ssr"
+    ],
+    "author": "Seb Ringrose <sebringrose@gmail.com>",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/sebringrose/fastify-preact-ssr/issues"
+    },
+    "homepage": "https://github.com/sebringrose/fastify-preact-ssr#readme",
+    "dependencies": {
+        "@fastify/static": "^6.10.2",
+        "fastify": "^4.21.0",
+        "preact": "^10.16.0",
+        "preact-render-to-string": "^6.2.0",
+        "preact-router": "^4.1.2"
+    },
+    "devDependencies": {
+        "@babel/plugin-transform-react-jsx": "^7.22.5",
+        "@rollup/plugin-babel": "^5.3.1",
+        "@rollup/plugin-json": "^4.1.0",
+        "@rollup/plugin-node-resolve": "^7.1.3",
+        "nodemon": "^3.0.1",
+        "rollup": "^1.32.1"
+    }
+}
